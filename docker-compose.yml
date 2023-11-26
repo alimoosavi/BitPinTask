@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: articles_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
+    restart: always
+    environment:
+      POSTGRES_DB: "articlesdb"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - 6431:5432
+  article_management:
+    build:
+      context: "."
+      dockerfile: "Dockerfile"
+    container_name: article_management_service
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
+  redisdata:
