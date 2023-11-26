@@ -130,6 +130,33 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get Article Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDMzMTU0LCJpYXQiOjE3MDEwMDExNTQsImp0aSI6ImE4ZTYwZGZhZTM3YjQ4NGY4ZmJhMGI1OWNkYTlmMzA5IiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJhLm1vb3NhdmkifQ.V-tAFTwr2vLWMW-RH5saskcvOV8NRaXwpPxJ7y_DeXo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/article_management/article-details/2/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"article_management",
+						"article-details",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

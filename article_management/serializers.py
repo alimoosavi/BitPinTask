@@ -56,3 +56,9 @@ class ArticleListSerializer(serializers.Serializer):
             data['user_rating'] = Score.objects.filter(user=user, article_id=article_id).first().score
 
         return data
+
+
+class ArticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Article
+        fields = ('id', 'title', 'content')
