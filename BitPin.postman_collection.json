@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "93bb4667-cf34-4b33-8995-887e3fe96924",
+		"name": "BitPin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"a.moosavi\",\n    \"email\": \"a.moosavi@gmail.com\",\n    \"password\": \"Ali09382399846\",\n    \"password2\": \"Ali09382399846\",\n    \"first_name\": \"Ali\",\n    \"last_name\": \"Moosavi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/auth/register/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"a.moosavi\",\n    \"password\": \"Ali09382399846\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/auth/login/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Score Article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDMzMTU0LCJpYXQiOjE3MDEwMDExNTQsImp0aSI6ImE4ZTYwZGZhZTM3YjQ4NGY4ZmJhMGI1OWNkYTlmMzA5IiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJhLm1vb3NhdmkifQ.V-tAFTwr2vLWMW-RH5saskcvOV8NRaXwpPxJ7y_DeXo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"article\": 2,\n    \"score\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/article_management/score/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"article_management",
+						"score",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articles List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDMzMTU0LCJpYXQiOjE3MDEwMDExNTQsImp0aSI6ImE4ZTYwZGZhZTM3YjQ4NGY4ZmJhMGI1OWNkYTlmMzA5IiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJhLm1vb3NhdmkifQ.V-tAFTwr2vLWMW-RH5saskcvOV8NRaXwpPxJ7y_DeXo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/article_management/article/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"article_management",
+						"article",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
